@@ -1,7 +1,6 @@
-packagepackage vn.t3h.ls3;
+package vn.t3h.ls3;
 import java.util.Arrays;
 import java.util.List;
-
 import java.util.ArrayList;
 public class BTVN1 {
 
@@ -30,9 +29,9 @@ public class BTVN1 {
 		int[] arr = {90, 90, 20 ,27, 35, 2, 2, 10, 8, 8};
 		List<Integer> list = new ArrayList<Integer>();
 		boolean dem = false;
-		for(int i = 0; i < arr.length - 1; i++) {
+		for(int i = 0; i < arr.length; i++) {
 			dem = false;
-			for(int j = 0;i < arr.length; j++) {
+			for(int j = i;j >= 0; j--) {
 				if(arr[i] == arr[j] && i != j) {
 					dem = true;
 					break;
@@ -41,7 +40,6 @@ public class BTVN1 {
 				list.add(arr[i]);
 			}
 		}
-		list.add(arr[arr.length - 1]);
 		Integer[] arr1 = new Integer[list.size()];
 		arr1 = list.toArray(arr1);
 		System.out.println("arr1: " + Arrays.toString(arr1));
